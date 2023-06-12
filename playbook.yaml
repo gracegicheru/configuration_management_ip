@@ -1,0 +1,9 @@
+---
+- name: Deploy YOLO Application
+  hosts: gcp_hosts
+  gather_facts: false
+  become: true
+  vars:
+    client_image: gracie123/yolo_app:v1.0.0
+    backend_image: gracie123/yolo_backend:v1.0.0
+    app_folder: /opt/yolo
