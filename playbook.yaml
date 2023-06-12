@@ -23,14 +23,14 @@
         name: npm
         state: present
 
-    # - name: Install Docker dependencies
-    #   apt:
-    #     name:
-    #       - "apt-transport-https"
-    #       - "ca-certificates"
-    #       - "curl"
-    #       - "software-properties-common"
-    #     state: present
+    - name: Install Docker dependencies
+      apt:
+        name:
+          - "apt-transport-https"
+          - "ca-certificates"
+          - "curl"
+          - "software-properties-common"
+        state: present
 
     # - name: Add Docker GPG key
     #   apt_key:
