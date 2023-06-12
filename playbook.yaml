@@ -47,10 +47,10 @@
         name: docker-ce
         state: present
 
-    # - name: Start Docker service
-    #   service:
-    #     name: docker
-    #     state: started
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
 
     # - name: Start Docker containers
     #   command: docker-compose up -d
