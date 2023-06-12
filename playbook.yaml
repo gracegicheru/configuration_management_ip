@@ -47,6 +47,22 @@
         name: docker-ce
         state: present
 
+    - name: Pull the client image
+      community.docker.docker_image:
+        name: "{{ client_image }}"
+        source: pull
+
+    - name: Pull the backend image
+      community.docker.docker_image:
+        name: "{{ backend_image }}"
+        source: pull
+
+    - name: Create app folder
+      file:
+        path: "{{ app_folder }}"
+        state: directory
+
+
     - name: Start Docker service
       service:
         name: docker
