@@ -18,10 +18,10 @@
         repo: https://github.com/gracegicheru/yolo.git
         dest: /opt/yolo
 
-    # - name: Install npm
-    #   apt:
-    #     name: npm
-    #     state: present
+    - name: Install npm
+      apt:
+        name: npm
+        state: present
 
     # - name: Install Docker dependencies
     #   apt:
